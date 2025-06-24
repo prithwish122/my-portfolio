@@ -29,8 +29,8 @@ export function EnhancedProjectsList() {
         "OpenCampus OC-I Incubated",
       ],
       status: "Founder • Incubated by OpenCampus OC-I • 1st in DeSci track",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/educhain0796/VeriBee",
+      demo: "https://veribee.vercel.app/",
       gradient: "from-blue-500 to-cyan-500",
       icon: "🔬",
       award: "Founder • OC-I Incubated",
@@ -43,8 +43,8 @@ export function EnhancedProjectsList() {
       role: "Full-stack Blockchain Developer",
       features: ["Smart contract automation", "Token-based rewards", "Secure task management"],
       status: "Deployed on AIA Mainnet",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/aia0796/QuestFlow",
+      demo: "https://quest-flow.vercel.app/",
       gradient: "from-purple-500 to-pink-500",
       icon: "🚀",
       award: "AIA Chain Winner",
@@ -57,7 +57,7 @@ export function EnhancedProjectsList() {
       role: "Frontend & Blockchain Developer",
       features: ["Voice-first social interaction", "Decentralized audio streaming", "Anti-bias technology"],
       status: "Best Build on Solana - Hack4Bengal 3.0",
-      github: "#",
+      github: "",
       demo: "#",
       gradient: "from-green-500 to-teal-500",
       icon: "🎙️",
@@ -71,8 +71,8 @@ export function EnhancedProjectsList() {
       role: "Full-stack Developer",
       features: ["Anonymous consultations", "Daily token rewards", "NFT zodiac badges"],
       status: "Winner - AIA Chain & EDU Chain Hackathons",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/educhain0796/LunarLiao",
+      demo: "https://lunar-liao-two.vercel.app/",
       gradient: "from-indigo-500 to-purple-500",
       icon: "🌙",
       award: "Multi-Hackathon Winner",
@@ -85,8 +85,8 @@ export function EnhancedProjectsList() {
       role: "Lead Developer",
       features: ["AI-powered learning", "Token incentives", "NFT certifications"],
       status: "Winner - Multiple EDU Chain Hackathons",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/manjeetsharma0796/Lango",
+      demo: "https://langedu.vercel.app/",
       gradient: "from-orange-500 to-red-500",
       icon: "🗣️",
       award: "Education Track Winner",
@@ -99,8 +99,8 @@ export function EnhancedProjectsList() {
       role: "Full-stack Developer",
       features: ["Event discovery", "Community engagement", "Decentralized hosting"],
       status: "Winner - Linea Dev Cook-Off",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/prithwish122/Evion-aptos",
+      demo: "https://evion-aptos.vercel.app/",
       gradient: "from-pink-500 to-rose-500",
       icon: "🎉",
       award: "General Track Winner",
@@ -342,7 +342,15 @@ export function EnhancedProjectsList() {
                 {/* Actions */}
                 <div className="flex gap-3">
                   <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button variant="outline" className="w-full">
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => {
+                        const url = projects[selectedProject].github
+                        if (url && url !== "#" && url !== "") window.open(url, "_blank")
+                      }}
+                      disabled={!projects[selectedProject].github || projects[selectedProject].github === "#" || projects[selectedProject].github === ""}
+                    >
                       <Github className="mr-2 h-4 w-4" />
                       View Code
                     </Button>
@@ -350,6 +358,11 @@ export function EnhancedProjectsList() {
                   <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       className={`w-full bg-gradient-to-r ${projects[selectedProject].gradient} hover:shadow-lg transition-all duration-300`}
+                      onClick={() => {
+                        const url = projects[selectedProject].demo
+                        if (url && url !== "#" && url !== "") window.open(url, "_blank")
+                      }}
+                      disabled={!projects[selectedProject].demo || projects[selectedProject].demo === "#" || projects[selectedProject].demo === ""}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo

@@ -10,26 +10,26 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "prithwish@example.com",
-      href: "mailto:prithwish@example.com",
+      value: "prithwishchatterjee1277@gmail.com",
+      href: "mailto:prithwishchatterjee1277@gmail.com",
     },
     {
       icon: Github,
       label: "GitHub",
       value: "github.com/prithwish",
-      href: "https://github.com/prithwish",
+      href: "https://github.com/prithwish122",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/prithwish",
-      href: "https://linkedin.com/in/prithwish",
+      value: "https://www.linkedin.com/in/prithwish-chatterjee/",
+      href: "https://www.linkedin.com/in/prithwish-chatterjee/",
     },
     {
       icon: Twitter,
       label: "Twitter",
-      value: "@prithwish_dev",
-      href: "https://twitter.com/prithwish_dev",
+      value: "@prithwish122",
+      href: "https://x.com/prithwish122",
     },
   ]
 
